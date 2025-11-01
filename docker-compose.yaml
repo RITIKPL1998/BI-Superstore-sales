@@ -1,0 +1,16 @@
+services:
+  airflow:
+    image: apache/airflow:2.6.1
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+      AIRFLOW_UID: 50000
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./data:/opt/airflow/data
+      - ./scripts:/opt/airflow/scripts
+      - ./db:/opt/airflow/db
+      - ./requirements.txt:/requirements.txt
+      - ./start-airflow.sh:/start-airflow.sh
+    ports:
+      - "8080:8080"
+    command: ["bash", "/start-airflow.sh"]
