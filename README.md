@@ -29,6 +29,6 @@ A full-stack BI pipeline using Apache Airflow, Python ETL, and Power BI dashboar
 
 ## 🚀 Run Locally
 ```bash
-git clone https://github.com/RITIKPL1998/bi-superstore-project.git
+git clone https://github.com/RITIKPL1998/BI-Superstore-sales.git
 cd bi-superstore-project
 docker-compose up  # To launch Airflow
